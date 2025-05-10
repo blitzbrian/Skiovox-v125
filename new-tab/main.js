@@ -9,7 +9,7 @@ import { ResizeController } from "./resize-controller.js"
 const WIFI_URL = "chrome://network/#select";
 const BLUETOOTH_URL = "chrome://bluetooth-pairing";
 const SETTINGS_URL = "chrome://settings";
-const NEW_TAB_URL = "chrome://new-tab-page";
+const CUSTOMIZE_URL = "chrome://customize-chrome-side-panel.top-chrome";
 const FILES_URL = "chrome://file-manager";
 const HELP_URL = "https://github.com/blitzbrian/Skiovox-v125";
 const WEBSTORE_URL = "https://chromewebstore.google.com";
@@ -54,8 +54,7 @@ settings.addEventListener('click', () => {
 })
 
 theme.addEventListener('click', () => {
-    alert("The original New Tab page will now open. On that page, click the edit icon in the bottom right corner to edit your browser theme.")
-    chrome.tabs.create({ url: NEW_TAB_URL })
+    chrome.tabs.create({ url: CUSTOMIZE_URL })
 })
 
 files.addEventListener('click', () => {
